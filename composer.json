@@ -1,0 +1,48 @@
+{
+    "name": "echo909/chatgpt-api",
+    "description": "Your Package Description here",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+		"chatgpt"
+	],
+    "authors": [
+        {
+            "name": "echo909",
+            "email": "echo909azu@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable":true,
+    "require": {
+        "guzzlehttp/guzzle": "^7.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Echo909\\ChatgptApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Echo909\\ChatgptApi\\Tests\\":"tests/"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Echo909\\ChatgptApi\\ChatgptApiServiceProvider"
+            ],
+            "aliases": {
+                "ChatgptApi": "Echo909\\ChatgptApi\\ChatgptApiFacade"
+            }
+        }
+    }
+}
