@@ -13,13 +13,14 @@ composer require echo909/chatgpt-api
 
 
 ## Usage
-
+```bash
 $gpt = new ChatgptApi;
 $result = $gpt->sendPrompt('Your question to gpt');
-
+```
 or use predifined templates to prefix your prompt
+```bash
 $result = $gpt->withTemplate('email')->sendPrompt('keyword');
-
+```
 
 
 ## Testing
