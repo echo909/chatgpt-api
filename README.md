@@ -14,7 +14,12 @@ composer require echo909/chatgpt-api
 
 ## Usage
 
-Write a few lines about the usage of this package.
+$gpt = new ChatgptApi;
+$result = $gpt->sendPrompt('Your question to gpt');
+
+or use predifined templates to prefix your prompt
+$result = $gpt->withTemplate('email')->sendPrompt('keyword');
+
 
 
 ## Testing
